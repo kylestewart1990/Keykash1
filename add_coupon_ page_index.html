@@ -7,7 +7,7 @@
 <!--   Core JS Files   -->
 	<script src="assets/js/jquery.min.js" type="text/javascript"></script>
 	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-	<script src="assets/js/material.min.js"></script>
+	<script src="assets/js/material.min.js" type="text/javascript"></script>
 <!-- CSS Files -->
   <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
   <link href="assets/css/material-kit.css" rel="stylesheet"/>
@@ -29,14 +29,15 @@
       	</div>
   	</div>
   </nav>
-  <h3>Current Coupons</h3>
+  <h3>Current Active Coupons</h3>
   <table class="table">
     <thead>
         <tr>
             <th class="text-center">#</th>
             <th>Dipartment of Coupon</th>
-            <th> Discont Amount</th>
+            <th> Discount Amount</th>
             <th>Date of Release</th>
+            <th>End Date</th>
             <th>Number of Issued Coupons</th>
             <th class="text-right">Actions</th>
         </tr>
@@ -44,6 +45,7 @@
     <tbody>
         <tr>
             <td class="text-center">1</td>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
@@ -63,6 +65,7 @@
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
             <td class="td-actions text-right">
                 <button type="button" rel="tooltip" title="Edit Profile" class="btn btn-success btn-simple btn-xs">
                     <i class="fa fa-edit"></i>
@@ -78,6 +81,7 @@
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
             <td class="td-actions text-right">
                 <button type="button" rel="tooltip" title="Edit Profile" class="btn btn-success btn-simple btn-xs">
                     <i class="fa fa-edit"></i>
@@ -89,7 +93,13 @@
         </tr>
       </tbody>
     </table>
-    <h3>Choose Dipartment for Your Coupon </h3>
+    <h3>Add New Coupon</h3>
+      <div class="progress progress-line-info">
+	     <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+	        <span class="sr-only">60% Complete</span>
+	       </div>
+      </div>
+    <legend>Choose Dipartment for Your Coupon</legend>
     <div class="col-md-3 dropdown">
 	   <a href="#" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
     	Food<b class="caret"></b></a>
@@ -154,25 +164,89 @@
       <br><br></br></br>
     <fieldset>
       <legend>Dipartment and Sub-Dipartment Selected</legend>
+    </div><br/>
       <label class="text-info"><b>Dipartment: </b><input type="text" name="dipartment"></label>
       <label class="text-info"><b>Sub-Dipartment: </b><input type="text" name="dipartment"></label>
     </fieldset>
       <br></br>
-      <fieldset>
+
+      <fieldset class="col-md-3">
+        <legend>Type of Discount</legend>
+        <input id="Percentage off of Order"type="checkbox" value="1">
+        <label for="percentage off of order" class="text-info"><b>1: Percentage off of Order</b></label><br/>
+        <input id="discount off of order"type="checkbox"value="2">
+        <label for="discount off of order" class=" text-info"><b>2: Discount off of Order</b></label><br/>
+        <input id="Discount With Purchased Item" type="checkbox"value="3">
+        <label for="discount with purchased item"class="text-info"><b>3: Discount With Purchased Item</b></label>
+      </fieldset>
+
+       <div class="col-md-3">
+       <fieldset>
+         <legend>Information of Discount</legend>
+         <label class="text-info"><b>1: </b><input type="text" name="dipartment"placeholder="Percentage off"></label>
+         <label class="text-info"><b>2: </b><input type="text" name="dipartment"placeholder="Discount off"></label>
+         <label class="text-info"><b>3: </b><input type="text" name="dipartment"placeholder="'#' Items Need for Discount"></label>
+         <p class="text-info"><b> &</b></p>
+         <label class="text-info"><b>3: </b><input type="text" name="dipartment"placeholder="Amount of Discount"></label>
+       </fieldset>
+     </div>
+
+     <div class="col-md-3 ">
         <legend>Coupon Information</legend>
         <label class="text-info"><b>Name of Coupon: </b><input type="text" name="dipartment"></label>
-        <label class="text-info"><b>Amount of Discount: </b><input type="text" name="dipartment"></label>
         <label class="text-info"><b>Date of Release: </b><input type="text" name="dipartment"></label>
+        <label class="text-info"><b>End Date: </b><input type="text" name="dipartment"></label>
         <label class="text-info"><b>Number of Issued Coupons: </b><input type="text" name="dipartment"></label>
-      </fieldset>
-      <br></br>
+    </div>
+
+    <div>
       <fieldset>
         <legend>Trigger Words</legend>
         <label class="text-info"><b>1: </b><input type="text" name="dipartment"></label>
         <label class="text-info"><b>2: </b><input type="text" name="dipartment"></label>
         <label class="text-info"><b>3: </b><input type="text" name="dipartment"></label>
       </fieldset>
-
+    </div>
+  <br><br></br></br>
+    <div>
+      <legend>Summary of Newly Add Coupon</legend>
+      <table class="table">
+        <thead>
+            <tr>
+                <th class="text-center">#</th>
+                <th>Dipartment</th>
+                <th>Sub-Dipartment</th>
+                <th>Type of Dicount</th>
+                <th>Information of Discount</th>
+                <th>Name of Coupon</th>
+                <th>Date of Release</th>
+                <th>End Date</th>
+                <th>Number of Issued Coupons</th>
+                <th>Trigger Words</th>
+                <th class="text-right">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-center">1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>1: <br/>2: <br/>3: <br/></td>
+                <td>
+                    <button title="Submit" class="btn btn-success btn-round btn-sm">
+                        <i class="material-icons">note_add</i> Submit
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+        </table>
+  </div>
       <br></br>
     <footer>
     &copy; 2017 Promotional Power Inc.
