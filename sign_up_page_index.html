@@ -33,46 +33,68 @@
   </nav>
 
   <h3>Welcome to KeyKash</h3>
+
   <div class="col-sm-4">
   	<div class="input-group has-success">
   		<span class="input-group-addon">
   			<i class="material-icons">business</i>
   		</span>
-  		<input type="text" class="form-control" placeholder="Company Name">
+  		<input type="text" class="btn btn-white btn-round" placeholder="Company Name">
   	</div>
+
     <div class="input-group has-success">
   		<span class="input-group-addon">
   			<i class="material-icons">email</i>
   		</span>
-  		<input type="text" class="form-control" placeholder="Company email">
+  		<input type="text" class="btn btn-white btn-round" placeholder="Company email">
   	</div>
+  </div>
+  <legend>Administrative user name & password</legend>
+    <div class="col-sm-4">
     <div class="input-group has-success">
   		<span class="input-group-addon">
-  			<i class="material-icons">account_circle</i>
+  			<i class="material-icons">supervisor_account</i>
   		</span>
-  		<input type="text" class="form-control" placeholder="User Name">
+  		<input type="text" class="btn btn-white btn-round" placeholder=" User Name">
+  	</div>
+    <div class=" input-group has-success">
+  		<span class="input-group-addon">
+  			<i class="material-icons">lock</i>
+  		</span>
+  		<input type="text" class="btn btn-white btn-round" placeholder=" Password">
+  	</div><br/>
+  </div>
+
+    <legend> User name & password that employee's will use to Redeem coupon.</legend>
+    <div class="col-sm-4">
+    <div class="input-group has-success">
+  		<span class="input-group-addon">
+  			<i class="fa fa-users" style="font-size:20px"></i>
+  		</span>
+  		<input type="text" class="btn btn-white btn-round" placeholder="Employee User Name">
   	</div>
     <div class=" input-group has-success">
   		<span class="input-group-addon">
   			<i class="material-icons">security</i>
   		</span>
-  		<input type="text" class="form-control" placeholder="Password">
-  	</div><br/>
+  		<input type="text" class="btn btn-white btn-round" placeholder="Employee Password">
+  	</div>
+  </div><br/>
 
-      <legend>Chose Your Membership Level</legend>
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-  <input type="hidden" name="cmd" value="_s-xclick">
-  <input type="hidden" name="hosted_button_id" value="KARQFGZS9S7UE">
-  <table>
-  <tr><td><input type="hidden" name="on0" value=""></td></tr><tr><td><select name="os0">
-  	<option value="Green Level">Green Level : $5.00 USD - monthly</option>
-  	<option value="Silver Level">Silver Level : $10.00 USD - monthly</option>
-  	<option value="Gold Level">Gold Level : $20.00 USD - monthly</option>
-  </select> </td></tr>
-  </table>
-  <input type="hidden" name="currency_code" value="USD">
-  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+  <legend>Chose Your Membership Level</legend><br/>
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+    <input type="hidden" name="cmd" value="_s-xclick">
+    <input type="hidden" name="hosted_button_id" value="KARQFGZS9S7UE">
+    <table>
+      <tr><td><input type="hidden" name="on0" value=""></td></tr><tr><td><select name="os0">
+  	     <option value="Green Level">Green Level : $5.00 USD - monthly</option>
+  	     <option value="Silver Level">Silver Level : $10.00 USD - monthly</option>
+  	     <option value="Gold Level">Gold Level : $20.00 USD - monthly</option>
+         </select> </td></tr>
+    </table>
+    <input type="hidden" name="currency_code" value="USD">
+    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
   </form>
     <footer>
       &copy; 2017KeyKash Inc.
